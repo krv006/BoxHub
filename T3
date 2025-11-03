@@ -1,0 +1,233 @@
+
+🧩 A. ADMIN PANEL
+
+Maqsad:
+Admin (boshqaruvchi) tizimdagi barcha konteynerlar, ijarachilar, foydalanuvchilar, mahsulotlar va to‘lov jarayonlarini nazorat qiladi. Shuningdek, statistik ma’lumotlarni tahlil qiladi va xizmat ko‘rsatishni boshqaradi.
+
+Funksional imkoniyatlar:
+
+Kategoriya boshqaruvi
+
+Yangi kategoriya qo‘shish (coffee, shop, food, fashion, services va boshqalar)
+
+Kategoriya nomini o‘zgartirish yoki o‘chirish
+
+Kategoriyani aktiv/passiv holatga o‘tkazish
+
+Har bir kategoriyaga mos ikonka yoki rang belgilash (frontend uchun)
+
+Konteyner boshqaruvi
+
+Yangi konteyner qo‘shish (nomi, ID raqami, o‘lchami, lokatsiyasi, statusi, rasmi)
+
+Konteyner joylashuvini xaritada ko‘rsatish (GPS koordinatalar)
+
+Status: bo‘sh, ijarada, ta’mirda, band
+
+Konteyner haqida texnik ma’lumot: o‘lchami (20ft, 40ft), elektr holati, suv, havo tizimi va boshqalar
+
+Konteynerni ijarachiga biriktirish yoki bo‘shatish
+
+Ijarachi (Tenant) boshqaruvi
+
+Ijarachilar ro‘yxatini ko‘rish
+
+Profil ma’lumotlarini tekshirish (passport, INN, kontaktlar)
+
+Ijarachiga konteyner tayinlash yoki almashtirish
+
+Ijara muddatini belgilash (boshlanish va tugash sanasi)
+
+Ijara holatini kuzatish (aktiv, muddati tugagan, ogohlantirilgan)
+
+Ijarachining faoliyat turi (coffee, shop, boutique va h.k.)
+
+To‘lov va ijaralar tarixi
+
+Har bir konteyner bo‘yicha oylik ijara to‘lovlarini ko‘rish
+
+To‘langan, to‘lanmagan, kechiktirilgan to‘lovlarni belgilash
+
+To‘lovlar bo‘yicha PDF invoice generatsiya qilish
+
+Avtomatik eslatma yuborish (email yoki telegram orqali)
+
+Hisobot: umumiy tushum, aktiv ijaralar, qarzdorlar
+
+Statistika va tahlil paneli (Dashboard)
+
+Eng ko‘p tashrif buyurilgan konteynerlar
+
+Eng ko‘p savdo qilgan ijarachilar
+
+Ijaralar davomiyligi bo‘yicha graflar
+
+Har oyda yangi ijarachilar soni
+
+Xarita ustida faol konteynerlar ko‘rsatkichi
+
+Ijara joylashuv xaritasi (HeatMap tarzida)
+
+🧩 B. TENANT (IJARACHI) PANELI
+
+Maqsad:
+Ijarachilar o‘z konteynerlarini mustaqil boshqarish, mahsulot joylashtirish, buyurtmalarni ko‘rish va mijozlar bilan aloqa o‘rnatish imkoniga ega bo‘ladi.
+
+Funksional imkoniyatlar:
+
+Profil boshqaruvi
+
+Kompaniya nomi, kontakt ma’lumotlari, rasm/logo yuklash
+
+Ish soatlari (open/close time)
+
+Tizimga kirish (login/parol) o‘zgartirish
+
+QR kod orqali konteyner profilini ulashish
+
+Konteyner boshqaruvi
+
+O‘z konteyner holatini ko‘rish (status, joylashuv)
+
+Konteyner haqida texnik ma’lumotlarni ko‘rish
+
+Ijara muddati tugashini ko‘rish (va avtomatik eslatma olish)
+
+Agar ta’mir yoki servis kerak bo‘lsa — xizmat talabi yuborish
+
+Mahsulot boshqaruvi
+
+Mahsulot qo‘shish (nomi, narxi, tavsifi, rasm)
+
+Mahsulotni tahrirlash yoki o‘chirish
+
+Mahsulotlarni kategoriyalarga ajratish
+
+Mahsulot statusi (aktiv / pasiv)
+
+Kunlik sotuvlar statistikasi
+
+Buyurtmalar moduli
+
+Kutilayotgan, bajarilgan, bekor qilingan buyurtmalarni ko‘rish
+
+Buyurtma tafsilotlari: mijoz ismi, telefon, summa, to‘lov holati
+
+Buyurtma bo‘yicha bildirishnomalar
+
+Excel / PDF formatda buyurtma hisobotini yuklab olish
+
+Statistika
+
+Kunlik / oylik savdo grafigi
+
+Mijozlar soni, reytinglar, eng ko‘p sotilgan mahsulotlar
+
+Xarita bo‘yicha tashriflar (geolocation traffic)
+
+🧩 C. MIJOZ (FOYDALANUVCHI) PANELI
+
+Maqsad:
+Oddiy foydalanuvchilar konteynerlardagi do‘konlarni topish, mahsulotlar bilan tanishish, buyurtma berish yoki tashrif rejalashtirish imkoniga ega bo‘lishadi.
+
+Funksional imkoniyatlar:
+
+Xarita interfeysi
+
+Konteynerlar joylashuvi (Google Maps yoki Leaflet orqali)
+
+Foydalanuvchining yaqinidagi konteynerlarni ko‘rsatish
+
+Har bir konteyner uchun asosiy ma’lumot (nom, kategoriya, reyting)
+
+Kategoriyalar bo‘yicha filtrlash
+
+Coffee / Food / Fashion / Shop / Services bo‘yicha filter
+
+Eng yaqin / eng mashhur / reyting bo‘yicha saralash
+
+Mahsulot qidiruvi
+
+Mahsulot nomi, kategoriya yoki narx oralig‘ida qidiruv
+
+Natijalarda konteyner joylashuvi va narx ko‘rinadi
+
+Online buyurtma (agar qo‘llab-quvvatlansa)
+
+Mahsulotni savatchaga qo‘shish
+
+To‘lov usuli tanlash (Click / Payme / Naqd)
+
+Yetkazib berish (pickup yoki delivery)
+
+Review va reyting
+
+Har bir konteyner / ijarachiga baho berish
+
+Sharh yozish va rasm yuklash
+
+Admin tomonidan sharhlarni moderatsiya qilish
+
+🧩 D. TO‘LOV TIZIMI
+
+Maqsad:
+Tizim ichida barcha moliyaviy operatsiyalarni xavfsiz va avtomatlashtirilgan tarzda boshqarish.
+
+Funksional imkoniyatlar:
+
+Integratsiyalar
+
+Click, Payme (API integratsiya)
+
+To‘lovni qabul qilish, statusni real vaqt rejimida kuzatish
+
+Ijara va buyurtmalar uchun to‘lov turi farqlanadi
+
+Invoice generatsiyasi
+
+Har bir to‘lov uchun avtomatik invoice (PDF)
+
+Invoice raqami, sana, summa, to‘lov turi, foydalanuvchi ma’lumotlari
+
+Admin panelda arxiv sifatida saqlanishi
+
+To‘lov monitoringi
+
+Barcha to‘lovlar jadvallari (status, summa, kimdan, qachon)
+
+Filtr: sana, foydalanuvchi, konteyner, holat
+
+To‘lovlar statistikasi (oylik tushum, qarzdorlar ro‘yxati)
+
+Avtomatik bildirishnoma (to‘lov qabul qilindi / rad etildi)
+
+🧩 E. XIZMAT (SERVICE) MODULI
+
+Maqsad:
+Konteynerlardagi texnik muammolarni tezda aniqlash va ularni xizmat ko‘rsatish jamoasiga uzatish.
+
+Funksional imkoniyatlar:
+
+Xizmat talabi yuborish
+
+Ijarachi tomonidan “muammo” turi tanlanadi (elektr, suv, ta’mir, boshqa)
+
+Izoh yozish, rasm yuklash
+
+Status: yangi, ko‘rib chiqilmoqda, bajarildi
+
+Admin uchun xizmat boshqaruvi
+
+Yangi talablar ro‘yxatini ko‘rish
+
+Texnik xodimga biriktirish
+
+Bajarilgan ishni tasdiqlash
+
+Statistik hisobot (oylik servis ishlari soni)
+
+Avtomatik bildirishnomalar
+
+Talab yuborilganda Admin va Texniklarga Telegram yoki Email orqali xabar
+
+Holat o‘zgarsa — ijarachiga avtomatik xabar
