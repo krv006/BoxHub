@@ -1,5 +1,6 @@
 import uuid
 
+from django.core.exceptions import ValidationError
 from django.db.models import Model, CharField, SlugField, DateTimeField, ForeignKey, CASCADE, DecimalField, ImageField
 from django.utils.text import slugify
 
@@ -48,7 +49,7 @@ class Product(SlugBasedModel):
         decimal_places=2,
         blank=True,
         null=True,
-        help_text="Agar chegirma bo‘lsa, bu narxni kiriting"
+        help_text="Agar chegirma bo‘lsa, bu narxni kiriting (so‘mda)"
     )
 
     class Meta:
@@ -58,7 +59,24 @@ class Product(SlugBasedModel):
     def __str__(self):
         return f"{self.name} ({self.category.name})"
 
-    def get_final_price(self):
-        if self.price_discounted and self.price_discounted < self.price_out:
-            return self.price_discounted
-        return self.price_out
+    def clean(self):
+        if self.price_discounted is not None:
+            if self.price_discounted > self.price_out - self.price_in:
+                raise ValidationError({
+                    'price_discounted': f"Chegirma narxi kelish narxidan ({self.price_in}) past bo‘la olmaydi!"
+                })
+
+    # def calculate_final_price(self):
+    #     if self.price_discounted:
+    #         return self.price_discounted
+    #     return self.price_out
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        # self.final_price = self.calculate_final_price()
+        super().save(*args, **kwargs)
+
+    # def get_profit(self):
+    #     return self.final_price - self.price_in
+
+
