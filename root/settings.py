@@ -1,4 +1,5 @@
 from pathlib import Path
+from root.jazzmin_settings import *
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -7,6 +8,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
