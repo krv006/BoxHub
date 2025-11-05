@@ -1,5 +1,6 @@
 from pathlib import Path
 from root.jazzmin_settings import *
+from root.drf_settings import *
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -18,6 +19,9 @@ INSTALLED_APPS = [
     # todo my package
     'apps.apps.AppsConfig',
     # todo third party package
+    'rest_framework',
+    'drf_spectacular',
+
 ]
 
 MIDDLEWARE = [
