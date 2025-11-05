@@ -61,22 +61,12 @@ class Product(SlugBasedModel):
 
     def clean(self):
         if self.price_discounted is not None:
-            if self.price_discounted > self.price_out - self.price_in:
+            profit = self.price_out - self.price_in
+            if self.price_discounted > profit:
                 raise ValidationError({
-                    'price_discounted': f"Chegirma narxi kelish narxidan ({self.price_in}) past bo‘la olmaydi!"
+                    'price_discounted': f"Chegirma narxi kelish narxidan ({profit}) kata bo‘la olmaydi!"
                 })
-
-    # def calculate_final_price(self):
-    #     if self.price_discounted:
-    #         return self.price_discounted
-    #     return self.price_out
 
     def save(self, *args, **kwargs):
         self.full_clean()
-        # self.final_price = self.calculate_final_price()
         super().save(*args, **kwargs)
-
-    # def get_profit(self):
-    #     return self.final_price - self.price_in
-
-
